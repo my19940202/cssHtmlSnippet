@@ -1,50 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>scroll</title>
-	<style type="text/css">
-	.out {
-		width: 400px;
-		height: 50px;
-		border: 1px solid red;
-		overflow:hidden;
-	}
-	.wrapper {
-		width: 800px;
-		height: 45px;
-		background-color: #DDD;
-	}
+    <meta charset="UTF-8">
+    <title>scroll</title>
+    <style type="text/css">
+    .out {
+        width: 400px;
+        height: 50px;
+        border: 1px solid red;
+        overflow:hidden;
+    }
+    .wrapper {
+        width: 800px;
+        height: 45px;
+        background-color: #DDD;
+    }
 
-	.inner {
-		width: 400px;
-		height: 45px;
-		float: left;
-		background-color: #DDD;
-	}
-	</style>
+    .inner {
+        width: 400px;
+        height: 45px;
+        float: left;
+        background-color: #DDD;
+    }
+    </style>
 </head>
 <body>
-	<div class="out">
-		<div class="wrapper">
-			<div class="inner">asdfasdfadsfasdfasdfadfadsf</div>
-			<div class="inner">asdfasdfadsfasdfasdfadfadsf</div>
-		</div>
-	</div>
+    <div class="out">
+        <div class="wrapper">
+            <div class="inner">asdfasdfadsfasdfasdfadfadsf</div>
+            <div class="inner">asdfasdfadsfasdfasdfadfadsf</div>
+        </div>
+    </div>
 </body>
 <script type="text/javascript">
-	var doc = document;
-	var out = document.querySelector('.out');
-	var ll = 0;
-	setInterval(function(){
-		ll+=10;
-		out.scrollLeft = ll;
-		if (ll === 400) {
-			ll = 0;
-		}
-	}, 100);
-
-
-
+    var doc = document;
+    var out = document.querySelector('.out');
+    var ll = 0;
+    setInterval(function(){
+        ll+=10;
+        out.scrollLeft = ll;
+        if (ll === 400) {
+            ll = 0;
+        }
+    }, 100);
 </script>
 </html>

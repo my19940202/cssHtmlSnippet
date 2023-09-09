@@ -6,20 +6,37 @@
 <title>Document</title>
 </head>
 <body>
-<div class="flex-box">
-    <div style="background-color: #0ff;width: 200px">sssssssss</div>
-    <div class="flex-box-inner" style="background-color: #0f0">ddddddddddddddddddddddddddddd</div>
-    <div class="flex-box-inner" style="background-color: #f00">3</div>
- </div>
+    <h1>
+        <a href="https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html">
+            阮一峰FLEX文档-示例比较全
+        </a>
+    </h1>
+    <div class="flex-box">
+        <div style="background-color: #0ff;width: 200px">
+            200px固定宽度
+        </div>
+        <div class="flex-box-inner" style="background-color: #0f0">
+            <p>flex = 1</p>
+            <p>flex属性是flex-grow, flex-shrink 和 flex-basis的简写, 默认值为0 1 auto。后两个属性可选。</p>
+        </div>
+        <div class="flex-box-inner" style="background-color: #f00">
+            <p>flex = 1</p>
+            <p>flex-grow是定义项目的放大比例的属性，所有项目的flex-grow为1，表示项目会等分剩余空间，自动放大占位。</p>
+        </div>
+        <div class="flex-box-inner" style="background-color: #0ff">
+            <p>flex = 1</p>
+            <p>flex-shrink属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。</p>
+        </div>
+    </div>
  <style type="text/css">
-   .flex-box{
+   .flex-box {
         display: flex;
         width: 100%;
+        height: 200px;
         flex-wrap: nowrap;
-        border:2px #000 solid;
+        border: 2px #000 solid;
     }
-   .flex-box-inner{
-        /* flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。 */
+   .flex-box-inner {
         flex: 1;
    }
  </style>
