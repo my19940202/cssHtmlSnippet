@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>有缓冲动画的scroll 切换</title>
+	<style type="text/css">
+	.outer {
+		background: red;
+		width: 250px;
+		height: 100px;
+		overflow: scroll;
+	}
+	.inner	{
+		width: 750px;
+		height: 90px;
+		background: #CCC;
+		font-size: 30px;
+	}
+	span {
+		display: block;
+		width: 50px;
+		height: 50px;
+		background: red;
+	}
+	</style>
+</head>
+<body>
+	<h1>有缓冲动画的scroll 切换</h1>
+	<div class="outer">
+		<div class="inner">
+			this is a text is s atekasjkd askdj adksfiqwie 
+		</div>
+	</div>
+
+	<span>btn</span>
+
+
+</body>
+<script type="text/javascript">
+	var outerDom = document.querySelector('.outer');
+	var spanBtn = document.querySelector('span');
+	var flag = 1;
+	function getTimer() {
+		var timer = setInterval(function () {
+			// console.log(outerDom.scrollLeft);
+			// if ((outerDom.scrollLeft % 250 === 0) && outerDom.scrollLeft > 0) {
+			// 	console.log('clear timer');
+			// 	outerDom.scrollLeft += 1;
+			// 	flag += 1;
+			// 	timer = clearInterval(timer);
+			// }
+			// else {
+				outerDom.scrollLeft = outerDom.scrollLeft - Math.ceil((-250 * flag + outerDom.scrollLeft)/5);
+			// }
+		}, 50);
+	}
+
+	spanBtn.onclick = function () {
+		console.log(outerDom.scrollLeft);
+		// outerDom.scrollLeft += 1;
+		getTimer();
+	};
+
+</script>
+</html>

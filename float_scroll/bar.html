@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>完成3秒事件的触发</title>
+	<style type="text/css">
+		.bb {
+			width: 200px;
+			height:150px;
+			border: 1px solid #FEA;
+			background-color:#FEA;
+			cursor: pointer;
+		}
+		/*.bb:hover {
+			background-color: #990990;
+		}*/
+		.colorbar {
+			height: 50%;
+			width: 0%;
+			background-color:#000;
+			transition: width 2s;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="bb" class="bb">
+		<div class="colorbar" id="bar"></div>
+	</div>
+</body>
+<script type="text/javascript">
+	var bb  = document.getElementById('bb');
+	var bar = document.getElementById('bar');
+	function xlog(arg) {
+		console.log(arg || 'heheheh');
+	}
+	var timer = null;
+
+	bb.onmouseover = function () {
+		timer = setTimeout(xlog, 2000);
+		bar.style.cssText = 'width:100%;';
+	}
+	bb.onmouseout = function () { 
+		bar.style.cssText = 'width:0%;';
+		timer = clearTimeout(timer);
+	}
+</script>
+</html>

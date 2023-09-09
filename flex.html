@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Document</title>
+</head>
+<body>
+<div class="flex-box">
+    <div style="background-color: #0ff;width: 200px">sssssssss</div>
+    <div class="flex-box-inner" style="background-color: #0f0">ddddddddddddddddddddddddddddd</div>
+    <div class="flex-box-inner" style="background-color: #f00">3</div>
+ </div>
+ <style type="text/css">
+   .flex-box{
+        display: flex;
+        width: 100%;
+        flex-wrap: nowrap;
+        border:2px #000 solid;
+    }
+   .flex-box-inner{
+        /* flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。 */
+        flex: 1;
+   }
+ </style>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!-- 
+Thu Jun 23 2016 11:39:58 GMT+0800 (CST)
+测试大量iframe对页面性能的影响
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <style type="text/css">
+        iframe {
+            width: 100%;
+            height: 150px;
+        }
+        button {
+            background: red;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <button id="click">点击生成iframe</button>
+    <p>下面都是iframe a a a a a</p>
+</body>
+<script type="text/javascript">
+    var iframe = '<iframe src="https://www.baidu.com/" frameborder="0"></iframe>';
+    var dom = document.getElementById('click');
+    var body = document.getElementsByTagName('body')[0];
+    var p = document.getElementsByTagName('p')[0];
+    var num = 0;console.log(p);
+    dom.onclick = function () {
+        num ++;
+        p.innerHTML = num * 10 + '个ifame';
+        var arr = [1,2,3,4,5,6,7,8,9,0];
+        arr.map(function () {
+            var iframeDom = document.createElement('iframe');
+            iframeDom.src = 'https://www.baidu.com/';
+            iframeDom.scrolling = 'no';
+            body.appendChild(iframeDom);
+        });
+    }
+</script>
+</html>
