@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS选择器</title>
+    <style type="text/css">
+        code {
+            border: 1px solid rgba(0, 0, 0, .1);
+            background-color: aliceblue;
+            margin: 10px;
+            padding: 10px;
+            display: list-item;
+            padding: 10px;
+            list-style: none;
+        }
+        span + a {
+            font-size: 18px;
+            color: red;
+        }
+        a ~ span {
+            font-size: 18px;
+            color: aquamarine;
+        }
+        p::first-line {
+            color: brown;
+        }
+        input.new:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_selectors#%E4%BC%AA%E9%80%89%E6%8B%A9%E5%99%A8%EF%BC%88pseudo%EF%BC%89">
+            CSS选择器-详细内容跳转MDN查看
+        </a>
+    </h1>
+    <h2>基础选择</h2>
+    <ul>
+        <li>class选择: .footer</li>
+        <li>id选择: #footer</li>
+        <li>标签选择: footer</li>
+        <li>属性选择: input[type=text]</li>
+        <li>*: * {}</li>
+    </ul>
+    <h2>组合器（Combinator）</h2>
+    <ul>
+        <li>后代组合器:A B</li>
+        <li>直接子代组合器: A > B</li>
+        <li>一般兄弟组合器: A ~ B </li>
+        <li>紧邻兄弟组合器: A + B</li>
+        <li>*: * {}</li>
+        <code>
+            div span 匹配div标签内所有span元素(不考虑层级)<br/>
+            div > span 匹配div内直接子代span元素(考虑层级)<br/>
+            span + a {color: red;}<br/>
+            a ~ span {color: blue;}
+        </code>
+        <h3>示例</h3>
+        <span>span1</span>
+        <a href="">a1</a>
+        <a href="">a2</a>
+        <a href="">a3</a>
+        <span>span2</span>
+    </ul>
+    <h2>伪选择器（Pseudo）</h2>
+    <ul>
+        <li>伪类: 使用状态信息来选择元素</li>
+        <li>伪元素: 伪选择器用于表示无法用 HTML 语义表达的实体</li>
+        <code>
+            input.new:focus {outline: none;} 输入框关闭高亮的蓝色效果<br/>
+            p::first-line 所有p元素的第一行。
+        </code>
+        <input type="text" placeholder="输入文字 有高亮" />
+        <input class="new" type="text" placeholder="输入文字 无高亮" />
+        <p>
+            这里是第1段描述文字<br/>
+            这里是第2段描述文字<br/>
+            这里是第3段描述文字<br/>
+            这里是第4段描述文字
+        </p>
+    </ul>
+</body>
+
+</html>
