@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>不同的尺寸单位</title>
+</head>
+<style>
+    .test {
+        text-decoration: underline;
+    }
+    html {
+        font-size: 100px;
+    }
+    h1 {
+        font-size: 30px;
+    }
+    .vw-vh {
+        width: 35vw;
+        height: 35vh;
+        background-color: #DDDDDD;
+        font-size: 20px;
+    }
+    .vw-vh-flex {
+        display: flex;
+        flex-direction: row;
+    }
+    .vmin {
+        width: 10vmin;height: 10vmin;background-color: #7FDBFF;
+    }
+    .vmax {
+        margin-left: 20px;
+        width: 10vmax;height: 10vmax;background-color: #39CCCC;
+    }
+    .rem {
+        width: 4rem;
+        height: 4rem;
+        background-color: #AAAAAA;
+        font-size: 20px;
+    }
+    .em-dom {
+        background-color: #FFDC00;
+        width: 500px;
+        height: 500px;
+    }
+    .em-dom div {
+        width: 10em;
+        height: 10em;
+        box-sizing: border-box;
+        border: 1px solid red;
+    }
+    .media {
+        font-size: 20px;
+    }
+    code {
+        border: 1px solid rgba(0, 0, 0, .1);
+        background-color: aliceblue;
+        margin: 10px;
+        padding: 10px;
+        display: list-item;
+        padding: 10px;
+        list-style: none;
+    }
+    .yy {
+        width: 400px;
+        height: 80px;
+    }
+    /* 针对小于600px的屏幕 */
+    @media (max-width: 600px) {
+        .yy {
+            background-color: #3D9970;
+        }
+    }
+    /* 针对大于600px但小于900px的屏幕 */
+    @media (min-width: 600px) and (max-width: 900px) {  
+        .yy {
+            background-color: #2ECC40;
+        }
+    }
+    /* 针对大于600px但小于900px的屏幕 */
+    @media (min-width: 900px) {
+        .yy {
+            background-color: #01FF70;
+        }
+    }
+</style>
+<body>
+    <h1>vw vh vmin vmax</h1>
+    <div class="vw-vh">
+        <div>35vw 35vh</div>
+        <a href="https://www.runoob.com/css/css-rwd-viewport.html">viewport 用户网页的可视区域</a> <br/>
+        <p>vw = 1% * viewport.width vh = 1% * viewport.height </p>
+        <p>vmin：选取vw和vh中最小的那个  vmax：选取vw和vh中最大的那个。 </p>
+        <div class="vw-vh-flex">
+            <div class="vmin">10vmin</div>
+            <div class="vmax">10vmax</div>
+        </div>
+    </div>
+
+    <h1>rem</h1>
+    <div class="rem">
+        rem = font size of the root element
+        <br/><a href="https://blog.51cto.com/u_15311558/3172302">1rem = html font-size</a>
+        <br/>常见操作, 便于计算
+        <ul>
+            <li>html.fontSize = 10px, 16px = 1.6rem</li>
+            <li>html.fontSize = 100px, 16px = .16rem</li>
+        </ul>
+    </div>
+
+    <h1>em</h1>
+    <div class="em-dom">
+        <div class="xx" style="font-size: 50px;">
+            font-size = 50px
+            <div class="xx" style="font-size: 40px;">
+                font-size = 40px
+                <div class="xx" style="font-size: 30px;">
+                    font-size = 30px
+                    <div class="xx" style="font-size: 20px;">
+                        font-size = 20px<br/>
+                        width: 10em<br/>height: 10em
+                        <br/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h1>media 媒体查询</h1>
+    <div class="media">
+        <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries">MDN官方介绍</a>
+        <ul>
+            <li>定位媒体类型: 针对不同设备 采取不同样式</li>
+            <code>
+                @media screen, print { 针对打印机 }
+            </code>
+            <li>定位媒体特性: 针对不同宽度的屏幕 采取不同样式(支持多种判断 详情见MDN)</li>
+            <li>创建复杂查询: 可以多种条件 组合判断</li>
+        </ul>
+        <div class="yy">
+            拖动浏览器侧标栏 调整可视区域宽度，可以看到颜色自动切换
+        </div>
+    </div>
+</body>
+</html>
