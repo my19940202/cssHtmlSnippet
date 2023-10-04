@@ -27,6 +27,15 @@
         input.new:focus {
             outline: none;
         }
+        a:link {
+            color: green;
+        }
+        a:active {
+            color: blue;
+        }
+        a:visited {
+            color: red;
+        }
     </style>
 </head>
 <body>
@@ -69,7 +78,8 @@
         <li>伪元素: 伪选择器用于表示无法用 HTML 语义表达的实体</li>
         <code>
             input.new:focus {outline: none;} 输入框关闭高亮的蓝色效果<br/>
-            p::first-line 所有p元素的第一行。
+            p::first-line 所有p元素的第一行。<br/>
+            a:link a:active
         </code>
         <input type="text" placeholder="输入文字 有高亮" />
         <input class="new" type="text" placeholder="输入文字 无高亮" />
@@ -79,7 +89,11 @@
             这里是第3段描述文字<br/>
             这里是第4段描述文字
         </p>
+        <div>
+            <a>没有href的超链接</a>
+            <a href="https://my19940202.github.io">有href的超链接</a>
+            <a href="https://my19940202.github.io/book/css_problem.html">点击后颜色会变化超链接</a>
+        </div>
     </ul>
 </body>
-
 </html>
