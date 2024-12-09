@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>振动按钮示例</title>
+    <style>
+        .wrapper {
+            width: 300px;
+            height: 400px;
+            line-height: 400px;
+            border: 1px solid red;
+            position: relative;
+        }
+        .content {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            border: 1px solid green;
+            transform: translate(-50%, -50%);
+        }
+        .f-wrapper {
+            width: 300px;
+            height: 400px;
+            background-color: rgb(255, 255, 0);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .f-content {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(0, 255, 255);
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html">
+        ruanyifeng的flex课程
+    </a>
+    <div class="wrapper">
+        <div class="content">
+        </div>
+    </div>
+
+    <div class="f-wrapper">
+        <div class="f-content">
+        </div>
+        <div class="f-content"></div>
+    </div>
+</body>
+</html>
