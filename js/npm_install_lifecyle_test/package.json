@@ -1,0 +1,17 @@
+{
+  "name": "npm_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "echo prebuild",
+    "build": "echo build",
+    "postbuild": "echo postbuild",
+    "preinstall": "echo preinstall",
+    "install": "echo install",
+    "postinstall": "echo postinstall",
+    "test": "echo \"this is test\""
+  },
+  "author": "",
+  "license": "ISC"
+}

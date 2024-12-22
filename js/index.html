@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>首页</title>
+<script type="application/javascript">
+	window.onload = function(argument) {
+		//所有的js对象都是以object的子类
+		function conducive(color,size,price){
+			this.color = color;
+			this.size = size;
+			this.price = price;
+		}
+		conducive.prototype.look = function() {
+			alert("summer bugs sucks");
+		};
+		conducive.prototype.listen = function() {
+			alert("summer bugs  go to hell");
+		};
+		conducive.prototype.aaa = {name:"The text"}; 
+		var bobo = new conducive(
+			"pink","intermediate","million");
+		var caocao = new conducive(
+			"purple","thin","billion");
+		//delete bobo.color;
+		alert( bobo.aaa.name ="Michael");
+		alert( caocao.aaa.name); 
+		//bobo.listen();
+		var xx = ["12","3","2","4"]; 
+		/*for (var i in bobo) {
+			alert(bobo[i]); 
+		};*/
+
+
+	}
+</script>
+</head>
+<body>
+	<div class="container">
+	<p>hfkjdhfgdkghdk</p>
+	</div>
+
+</body>
+</html>

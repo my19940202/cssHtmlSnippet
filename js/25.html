@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>首页</title>
+<script type="application/javascript">
+/*内存分为堆 栈  代码区 静态区*/
+	window.onload = function(argument) {
+		open("top.html","windows","menubar=0,toolbar=0");
+		//alert(screenLeft);
+		/*类似的属性还有screenLeft,screenTop,screenX,screenY,*/
+		//alert(screenX);
+		//var timer = setInterval();
+		//window.status = "操你安徽省的所得税过渡";
+		//alert(frames.length);//弹出3个
+		var x = 100,y = 100;
+		//浏览器相对于原来位置移动
+		//moveBy(x,y);
+		//moveTo(x,y);
+		//resizeTo(400,300);
+		/***/
+		var input = document.getElementById('test').getElementsByTagName('input');
+		var sto = document.getElementById("click");
+		sto.onclick= function (){
+			clearInterval(nimei);
+		}
+		var i = 0;
+		/*简单的时钟*/
+		var nimei = setInterval(dd,100);
+		function dd(){
+			i++;
+			/*input[2].value;
+			input[1].value;
+			input[0].value;*/
+			//input[2].value = i;
+			if (input[2].value < 60) {
+				input[2].value = i;
+			}else{
+				input[2].value = 0;
+				i = 0;
+				input[1].value++;
+				if (input[1].value >= 60) {
+					input[1].value = 0;
+					input[0].value++;
+				};
+			}
+			if (input[0].value == 24) {
+				alert("It is time to sleep");
+			};
+		}
+
+	}
+</script>
+</head>
+
+<body>
+	<header>
+		
+this is header
+	</header>	
+	<div>
+	<p id="click">The clock here</p>
+	<p id="test">
+		<input type="text"   value="0" size="5">
+		<input type="text"  value="0" size="5">
+		<input type="text" value="0" size="5">
+	</p>
+	</div>
+	<footer>
+		this is the footer.
+	</footer>
+
+
+</body>
+
+
+
+<!--
+<frameset rows="20%,30%,50%">
+	<frame>
+	<frameset cols="10%,20%,30%,40%">
+		<frame></frame>
+		<frame></frame>
+		<frame></frame>
+		<frame></frame>
+	</frameset>
+	<frame>
+</frameset>
+	<frameset rows="20%,*">
+	<frame src="top.html">
+	<frameset cols="20%,*">
+		<frame src="left.html"></frame>
+		<frame src="right.html"></frame>
+	</frameset>
+</frameset>
+-->
+</html>

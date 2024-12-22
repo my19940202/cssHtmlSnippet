@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>首页</title>
+<script type="application/javascript">
+	window.onload = function(argument) {
+		Object.prototype.fuck= function () {
+			alert("just fuck again");
+		};
+		
+		//Object是所有类的父类
+		function read(){
+			this.fuck = function(){
+				alert("no noy fuck");
+			}
+			/*
+			父类有同名方法的话，就不去在上一级寻找,方法就是,自己有就不找，没有就一级一级早上去，。*/
+		}
+		function learn(){
+			this.fuck = function(){
+				alert("I am a jdshdjs");
+			}
+		}
+		learn.prototype = new read();
+		var nimei = new learn();
+		nimei.fuck();
+
+		/*一切皆为对象************************
+		有本地对象
+		内置对象
+		global对象
+		*/
+		var str = new String("jdkhvjkxc");
+		//alert(str); 
+		/*Math 对象  Math.xx()   
+		round ,floor向下取整,ceil向上取整
+		随机数random*/
+		var num = Math.random();
+		alert(Math.floor(num*100));
+
+		/*var a = ["1221","sdkfj","sadhjkdhjk","hhdjshd"];
+		alert(a[2]);*/
+
+	}
+</script>
+</head>
+<body>
+	<div class="container">
+	<p>hfkjdhfgdkghdk</p>
+	</div>
+
+</body>
+</html>

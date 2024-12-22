@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>首页</title>
+<script type="application/javascript">
+/*内存分为堆 栈  代码区 静态区*/
+
+	window.onload = function(argument) {
+		Object.prototype.fuck= function () {
+			alert("just fuck again");
+		};
+		var a = ["1221","sdkfj","sadhjkdhjk","hhdjshd"];
+		var b = new String("12a局深刻的");
+		//alert(b[0]);
+		//alert(b.charCodeAt(0));
+		var nimei = b.charCodeAt(0);
+		//alert(String.fromCharCode(nimei));
+		var str = "cvcxcnxj";
+
+		var stra = str.indexOf("加");
+		var btn = document.getElementById('nimei');
+
+		//还有lastIndexOf()返回末次出现的位置
+		//btn.value = str.replace("今晚","kxzhdjkzxc");
+		btn.value = str.toUpperCase();
+
+
+		/***数组来了****/
+		var arr1 = [6,5,4,8,9,10];
+		arr1.push("h","jkdjsa");//想末尾添加
+		arr1.unshift("h","好久没有行动的额噶觉了"); 
+		/*向开头添加*/
+		/*删除元素
+		pop删掉最后一个
+		shift()删掉第一个
+		*/
+		/*for (var i in arr1) {
+			alert(arr1[i]);
+		};*/
+
+
+
+
+
+
+		var cc = ["a","dd",1,2,"jkzcj","jjd/dslfd.djfk","456446545"];
+		//alert(cc.slice(4));//取出cc[4]和cc[4]之后的内容
+		//cc.slice(-1)就是去最后一个元素
+		var arr2 = [6,12,4,19,9,10];
+		arr2.sort(
+			function (a,b){
+				return a-b;
+			});
+		//alert(arr1.concat(arr2));
+
+		var s = arr2.slice(4);
+		alert(arr2);
+		alert(s);
+			/*	
+		for (var i in arr2) {
+			alert(arr2[i]);
+		};*/
+		//删除数组的重复元素
+
+
+
+
+
+
+
+	}
+</script>
+</head>
+<body>
+	<div class="container">
+	<p><input type="text" id="nimei">    </p>
+	</div>
+
+</body>
+</html>
