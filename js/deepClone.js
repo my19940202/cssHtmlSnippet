@@ -31,7 +31,6 @@ async function main() {
     newDeepA.c[0] = 1234;
 
     console.log(a, 'newDeepA', newDeepA);
-    
 }
 
 main()
