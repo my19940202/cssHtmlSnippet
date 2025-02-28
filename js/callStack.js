@@ -6,6 +6,13 @@ function foo() {
     hoo()
     console.log('result')
 }
+/**
+ * Function hoo
+ * Logs the current call stack trace and calls the ioo function.
+ * 
+ * @function hoo
+ * @returns {void}
+ */
 function hoo() {
     var hoo_var = 'hoo_context';
     console.trace()

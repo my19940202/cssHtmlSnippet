@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>三角形</title>
+</head>
+<body>
+    <h1>图片srcset: 按照设备像素比window.devicePixelRatio来选择图片</h1>
+    <img srcset="https://placehold.co/100x100g 1x, https://placehold.co/200x200 2x, https://placehold.co/300x300 3x"
+        src="https://placehold.co/200x200" alt="百度">
+
+    <h1>图片srcset: 按照屏幕宽度来选择不同图片</h1>
+    <img srcset="https://placehold.co/100x100g 320w, https://placehold.co/200x200 640w, https://placehold.co/300x300 1024w"
+        src="https://placehold.co/200x200" alt="百度">
+
+        <picture>
+            <source type="image/webp" srcset="https://jmy-pic.baidu.com/0/pic/-587627700_-1543851530_1505061101.jpg@f_webp">
+            <!-- 这个是默认的图片 -->
+            <img alt="" src="https://jmy-pic.baidu.com/0/pic/-587627700_-1543851530_1505061101.jpg">
+        </picture>
+</body>
+</html>

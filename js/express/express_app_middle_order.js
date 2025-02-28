@@ -2,16 +2,19 @@ const express = require('express');
 const app = express();
 
 app.use((req, res, next) => {
-    console.log('this middleware 1');
+    console.log('start this middleware 1');
     next();
+    console.log('end this middleware 1');
 });
 app.use((req, res, next) => {
-    console.log('this middleware 2');
-    next();
+    console.log('start this middleware 2');
+    res.send('middleware 2');
+    // next();
 });
 app.use(/\/404/g, (req, res, next) => {
-    console.log('this middleware for 404');
+    console.log('start this middleware for 404');
     next();
+    console.log('end this middleware for 404');
 });
 
 app.get('/', function (req, res) {
